@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+	background: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+	width: 30%;
+	margin: auto;
+	margin-top: 100px;	
+}
+
+.search {
+	width: 100%;
+	position: relative;
+	display: flex;
+	/* border: 2px solid; */
+}
+
+.search-input {
+	width: 100%;
+	border: 3px solid #00B4CC;
+	border-right: none;
+	padding: 10px;
+	height: 20px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	color: #9DBFAF;
+	font-size: 16px;
+}
+
+.search-input:focus{
+	/* color: #00B4CC; */
+	color: black;
+}
+
+.searchButton {
+	width: 48px;
+	/* height: 46px; */
+	/* height: 100%; */
+	border: 0px solid #00B4CC;
+	background: #00B4CC;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+/* .wrap{
+	width: 30%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+
+
+
+.result-child {
+	/* display: none; */
+	opacity: 0;
+	height: 37px;
+	/* border: 2px solid black; */
+	border-radius: 5px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	margin-bottom: 5px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	/* cursor: auto; */
+}
+
+.new-bottom {
+	width: 30%;
+	margin: auto;
+}
+
+* {
+    /* Change your font family */
+    font-family: sans-serif;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    /* min-width: 400px; */
+	width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    /* background-color: #009879; */
+    background-color: #6C7AE0;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+	background-color: #FFFFFF;
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    /* background-color: #f3f3f3; */
+    background-color: #F8F6FF;
+	/* background-color: #FFFFFF; */
+}
+
+/* .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+} */
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    /* color: #009879; */
+    color: #F8F6FF
+}
+
+/* @media screen and (max-width: 600px) {
+	body {
+		background-color: red;
+	}
+} */

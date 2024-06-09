@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test Numbers</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/style-mobile.css">
+	<script src="/script.js" defer></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="search">
+			<input type="text" class="search-input" placeholder="What are you looking for?">
+			<button class="searchButton">
+				<i class="fa fa-search"></i>
+			</button>
+		</div>
+
+		<div class="result">
+			<!-- 7 element -->
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+			<a>
+				<div class="result-child">
+
+				</div>
+			</a>
+		</div>
+
+		
+
+
+	</div>
+
+	<div class="new-bottom">
+		<table class="content-table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>B number</th>
+					<th>A number</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<% 
+					let bnumbers = data.bnumbers; 
+					let anumbers = data.anumbers; 
+					
+					%>
+				<% for(var i=0; i < bnumbers.length; i++) { %>
+					<tr>
+						<td>
+							<%= i+1 %>
+						</td>
+						<td>
+							<%= bnumbers[i] %>
+						</td>
+						<td>
+							<%= anumbers[i] || "" %>
+						</td>
+						<td></td>
+					</tr>
+				<% } %>
+
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>
