@@ -72,27 +72,36 @@
 					<th>B number</th>
 					<th>A number</th>
 					<th>Description</th>
+					<th>Audio</th>
 				</tr>
 			</thead>
 			<tbody>
 				
 				<% 
-					let bnumbers = data.bnumbers; 
-					let anumbers = data.anumbers; 
+					// data is coming from index.js as array of objects, each containing info about phone number
+					// let bnumbers = data.bnumbers; 
+					// let anumbers = data.anumbers; 
 					
-					%>
-				<% for(var i=0; i < bnumbers.length; i++) { %>
+				%>
+				<% for(let i = 0; i<data.length; i++) { %>
 					<tr>
 						<td>
-							<%= i+1 %>
+							<%=i+1 %>
 						</td>
 						<td>
-							<%= bnumbers[i] %>
+							<%= data[i].number %>
 						</td>
 						<td>
-							<%= anumbers[i] || "" %>
+							<%= data[i].ani %>
 						</td>
-						<td></td>
+						<td>
+							<%= data[i].description %>
+						</td>
+						<td>
+							<audio controls>
+								<source src="audios/<%=data[i].number %>.mp3" type="audio/mpeg">
+							</audio>
+						</td>
 					</tr>
 				<% } %>
 

@@ -20,6 +20,7 @@ function getCountry(country) {
 }
 
 const countries = ["Russia Fix", "Armenia", "Afghanistan", "asxab tamaev", "Aruzhan", "Ananas	",  "Canada", "Germany Mobile", "Army", "Germany Fix", "Austria Mobile", "Austria Fix", "Nigeria MTN", "Nigeria Globacom"]
+countries.sort()
 
 input.addEventListener("keyup", function (evn) {
 	for(let i = 0; i<blocks.length; i++) {
@@ -40,7 +41,7 @@ input.addEventListener("keyup", function (evn) {
 	}
 	console.clear()
 	for (let i = 0; i < countries.length; i++) {
-		if (countries[i].toLowerCase().startsWith(input.value.trim().toLowerCase()) && currentBLock<=6) {
+		if (countries[i].toLowerCase().includes(input.value.trim().toLowerCase()) && currentBLock<=6) {
 			blocks[currentBLock].innerHTML = countries[i]
 			links[currentBLock].setAttribute("href", `${getCountry(countries[i])}`);
 			// links[currentBLock].style.corsor = pointer;
